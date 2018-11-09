@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Poorly taught JavaScript Challenge</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>"Teach Yourself JavaScript" skill drill</h1>
+		</div>
+		<div class="container">
+			<div class="col-sm">
+				<div class="row">
+					<div class="menu">
+						<form class="form-check">
+							<h3 class="option-top">Size:</h3>
+							<input class="size" type="radio" name="Size" value="Personal Pizza"> Personal Pizza<br>
+							<input class="size" type="radio" name="Size" value="Medium Pizza"> Medium Pizza<br>
+							<input class="size" type="radio" name="Size" value="Large Pizza"> Large Pizza<br>
+							<input class="size" type="radio" name="Size" value="Extra Large Pizza" checked> Extra Large Pizza<br>
+						</form>
+					</div>
+				<div class="w-100"></div>
+					<div class="menu">
+						<form class="form-check">
+							<h3 class="option-top">Crust:</h3>
+							<input class="crust" type="radio" name="Crust" value="Plain Crust" checked> Plain Crust<br>
+							<input class="crust" type="radio" name="Crust" value="Garlic Butter Crust"> Garlic Butter Crust<br>
+							<input class="crust" type="radio" name="Crust" value="Cheese Stuffed Crust"> Cheese Stuffed Crust<br>
+							<input class="crust" type="radio" name="Crust" value="Spicy Crust"> Spicy Crust<br>
+							<input class="crust" type="radio" name="Crust" value="House Special Crust"> House Special Crust<br>
+						</form>
+					</div>
+					<div class="menu">
+						<form class="form-check">
+							<h3 class="option-top">Sauce:</h3>
+							<input class="sauce" type="radio" name="Sauce" value="Marinara sauce" checked> Marinara sauce<br>
+							<input class="sauce" type="radio" name="Sauce" value="White sauce"> White sauce<br>
+							<input class="sauce" type="radio" name="Sauce" value="Barbeque sauce"> Barbeque sauce<br>
+							<input class="sauce" type="radio" name="Sauce" value="No sauce"> No sauce<br>
+						</form>
+					</div>
+					<div class="menu">
+						<form class="form-check">
+							<h3 class="option-top">Cheese:</h3>
+							<input class="cheese" type="radio" name="Cheese" value="Regular cheese" checked> Regular cheese<br>
+							<input class="cheese" type="radio" name="Cheese" value="No cheese"> No cheese<br>
+							<input class="cheese" type="radio" name="Cheese" value="Extra cheese"> Extra cheese<br>
+						</form>
+					</div>
+				<div class="w-100"></div>	
+					<div class="menu">
+						<form class="form-check">
+							<h3 class="option-top">Meats:</h3>
+							<input class="meats" type="checkbox" name="Meat" value="Pepperoni"> Pepperoni<br>
+							<input class="meats" type="checkbox" name="Meat" value="Sausage"> Sausage <br>
+							<input class="meats" type="checkbox" name="Meat" value="Canadian Bacon"> Canadian Bacon<br> 
+							<input class="meats" type="checkbox" name="Meat" value="Ground Beef"> Ground Beef<br>
+							<input class="meats" type="checkbox" name="Meat" value="Anchovy"> Anchovy<br>
+							<input class="meats" type="checkbox" name="Meat" value="Chicken"> Chicken<br>
+						</form>
+					</div>
+					<div class="menu">
+						<form class="form-check">
+							<h3 class="option-top">Veggies:</h3>
+							<input class="veggies" type="checkbox" name="Veggie" value="Tomatoes"> Tomatoes<br>
+							<input class="veggies" type="checkbox" name="Veggie" value="Onions"> Onions <br>
+							<input class="veggies" type="checkbox" name="Veggie" value="Olives"> Olives<br> 
+							<input class="veggies" type="checkbox" name="Veggie" value="Green Peppers"> Green Peppers<br>
+							<input class="veggies" type="checkbox" name="Veggie" value="Mushrooms"> Mushrooms<br>
+							<input class="veggies" type="checkbox" name="Veggie" value="Pineapple"> Pineapple<br>
+							<input class="veggies" type="checkbox" name="Veggie" value="Spinach"> Spinach<br>
+							<input class="veggies" type="checkbox" name="Veggie" value="Jalapeno"> Jalapeno<br>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="col-md">
+				<div class="row">
+					<button type="button" class="btn btn-primary btn-lg" onclick="getOrder()">Place Order</button>
+					<button type="button" class="btn btn-secondary btn-lg" onclick="clearAll()">Cancel</button>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="col-md">
+				<div class="row">
+					<div id="cart">
+						<div id="title1"><h3>You Ordered:</h3></div>
+						<div id="title2"><h3>Subtotal:</h3></div>
+						<div id="showText1"></div>
+						<div id="showText2"></div>
+						<div id="totalPrice1"><h3>Total Price:</h3></div>
+						<div id="totalPrice2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script src="./js/orderscript.js"></script>
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

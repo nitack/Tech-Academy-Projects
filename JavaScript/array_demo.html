@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+button{font-size:1.5em;font-weight:bold;height:75px;width:100px;}
+</style>
+</head>
+<body>
+
+<h1 id="countdown">Click button for colors!</h1>
+<br><br>
+<button class="btn" onclick="up()">Start!</button>
+
+<script>
+var i =0;
+var myArray = [10,9,8,7,6,5,4,3,2,1, "Happy New Year!"];
+function up() {
+	if(i < myArray.length) {
+    	document.getElementById('countdown').style.color = "red";
+        document.getElementById('countdown').innerHTML = myArray[i];
+        i++;
+    }
+    window.setTimeout(up, 250);
+ };
+
+</script>
+
+
+</body>
+</html> 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Pizza Drill Demo</title>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+		<meta content="width=device-width,initial-scale=1.0" name="viewport">
+		<style>#menuBG{width:400px;height:470px;margin:10px auto;}#frmMenu{width:400px;height:200px;}
+		#totalPrice{width:200px;height:190px;margin:0 auto;float:right;}.left{width:200px;height:200px;float:left;}
+		.right{width:200px;height:200px;float:right;}#showText{width:200px;height:190px;margin:0px auto;float:left;}
+		#cart{top:0;margin:0px auto;width:400px;height:200px;}#btnOrder{margin:10px 0px 0px 100px;width:100px;height:40px}
+		</style>
+	</head>
+	<body>
+		<div id="menuBG">
+			<h1 style="margin:0 0px 0 20px;">Pizza Drill Tutorial</h1>
+			<input id="btnOrder" type="button" onclick="getReceipt()" 
+				value="Place Order">
+			<form id="frmMenu">
+				<div class="menu left">
+					<h3>Size:</h3>
+					<input class="size" type="radio" name="Size" value="Personal Pizza"> Personal Pizza<br>
+					<input class="size" type="radio" name="Size" value="Medium Pizza"> Medium Pizza<br>
+					<input class="size" type="radio" name="Size" value="Large Pizza" checked> Large Pizza<br>
+					<input class="size" type="radio" name="Size" value="Extra Large Pizza"> Extra Large Pizza<br>
+				</div>
+				<div class="menu right">
+					<h3>Meats:</h3>
+					<input class="meats" type="checkbox" name="Meat" value="Pepperoni"> Pepperoni<br>
+					<input class="meats" type="checkbox" name="Meat" value="Sausage"> Sausage <br>
+					<input class="meats" type="checkbox" name="Meat" value="Canadian Bacon"> Canadian Bacon<br> 
+					<input class="meats" type="checkbox" name="Meat" value="Ground Beef"> Ground Beef<br>
+					<input class="meats" type="checkbox" name="Meat" value="Anchovy"> Anchovy<br>
+					<input class="meats" type="checkbox" name="Meat" value="Chicken"> Chicken<br>
+				</div>
+				<div id="cart">
+					<div id="showText"></div>
+					<div id="totalPrice"></div>
+				</div>
+			</form>
+		</div>
+		<script src="./js/final_drill_basic.js"></script>
+	</body>
+</html>
