@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "drill100", "drill100\drill100.csproj", "{184E8C9E-911F-4570-8BA7-3A0F679DE9C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{184E8C9E-911F-4570-8BA7-3A0F679DE9C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184E8C9E-911F-4570-8BA7-3A0F679DE9C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{184E8C9E-911F-4570-8BA7-3A0F679DE9C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{184E8C9E-911F-4570-8BA7-3A0F679DE9C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D20933D3-01D3-4F4D-88F7-0707AE37BB4C}
+	EndGlobalSection
+EndGlobal
