@@ -8,6 +8,8 @@ namespace drill111
 {
     public class Maths
     {
+        
+
         public static int Addition(int input)
         {
             return input + 5;

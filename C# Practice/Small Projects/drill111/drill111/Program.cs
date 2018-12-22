@@ -20,13 +20,15 @@ namespace drill111
 {
     public class Program
     {
-        public static int Main(string[] args)
+        public static void Main(string[] args)
         {
-            Maths opps = new Maths();
             Console.WriteLine("Pick a number");
-            public int userNum = Convert.ToInt32(Console.ReadLine());
+            int userNum = Convert.ToInt32(Console.ReadLine());
 
-            opps.Addition(int userNum)
+            Maths.Addition(userNum);
+            {
+
+            }
         }
     }
 }
