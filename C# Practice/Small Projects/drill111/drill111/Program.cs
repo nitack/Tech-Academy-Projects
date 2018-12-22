@@ -24,11 +24,16 @@ namespace drill111
         {
             Console.WriteLine("Pick a number");
             int userNum = Convert.ToInt32(Console.ReadLine());
+            int resultAdd = Maths.Addition(userNum);
+            int resultSub = Maths.Subtraction(userNum);
+            int resultMult = Maths.Multiply(userNum);
 
-            Maths.Addition(userNum);
-            {
+            Console.WriteLine("Your number was " + userNum + ", added to 5 the result is " + resultAdd);
+            Console.WriteLine("Your number was " + userNum + ", 5 subtracted from it results in " + resultSub);
+            Console.WriteLine("Your number was " + userNum + ", multiplied by 5 the result is " + resultMult);
 
-            }
+            Console.ReadLine();
+
         }
     }
 }
