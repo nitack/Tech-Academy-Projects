@@ -27,16 +27,16 @@ namespace drill115
             Console.WriteLine("Pick a number");
             int userNum1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Pick another number, or don't...");
-            string userNum2 = Console.ReadLine();
-            if (userNum2 == null)
+
+            int userNum2;
+            if (int.TryParse(Console.ReadLine(), out userNum2))
             {
-                int resultAdd = Maths.Addition(userNum1);
+                int resultAdd = Maths.Addition(userNum1, userNum2);
                 Console.WriteLine(resultAdd);
             }
             else
             {
-                int intInput = (Convert.ToInt32(userNum2));
-                int resultAdd = Maths.Addition(userNum1, intInput);
+                int resultAdd = Maths.Addition(userNum1);
                 Console.WriteLine(resultAdd);
             }
             Console.ReadLine();
