@@ -25,9 +25,12 @@ namespace drill120
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee();
-            List<string> FirstName = new List<string>() { "Sample" };
-            List<string> LastName = new List<string>() { "Student" };
+            Employee employee = new Employee()
+            {
+                FirstName = "Sample",
+                LastName = "Student",
+            };
+            
 
             employee.SayName();
             Console.ReadLine();

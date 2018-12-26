@@ -10,7 +10,7 @@ namespace drill120
     {
         public void SayName()
         {
-            Console.WriteLine("Name: " + FirstName + " " + LastName);
+            Console.WriteLine("Name: {0} {1}", FirstName, LastName);
         }
 
         public string FirstName { get; set; }
