@@ -27,7 +27,8 @@ namespace drill129
             };
             Console.WriteLine("Do the two employees have the same ID?");
             Console.WriteLine(employee == employee2);
-
+            Console.WriteLine("Do the two employees have different IDs?");
+            Console.WriteLine(employee != employee2);
 
             Console.ReadLine();
         }
