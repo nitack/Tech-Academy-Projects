@@ -17,8 +17,16 @@ namespace TwentyOne
 
             Console.WriteLine("Welcome to the Dayland Casino.  Let's start by telling me your name.");
             string playerName = Console.ReadLine();
-            Console.WriteLine("And how much money did you bring today?");
-            int bank = Convert.ToInt32(Console.ReadLine());
+
+            bool validAnswer = false;
+            int bank = 0;
+            while (!validAnswer)
+            {
+                Console.WriteLine("And how much money did you bring today?");
+                validAnswer = int.TryParse(Console.ReadLine(), out bank);
+                if (!validAnswer) Console.WriteLine("Please enter digits only, no decimals.");
+            }
+
             Console.WriteLine("Hello, {0}.  Would you like to join a game of 21 right now?", playerName);
             string answer = Console.ReadLine().ToLower();
             if (answer == "yes" || answer == "y" || answer == "sure" || answer == "yeah")
@@ -29,7 +37,15 @@ namespace TwentyOne
                 player.isActivelyPlaying = true;
                 while (player.isActivelyPlaying && player.Balance > 0 )
                 {
-                    game.Play();
+                    try
+                    {
+                        game.Play();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("An error occurred.  Please contact your System Administrator.:");
+                    }
+
                 }
                 game -= player;
                 Console.WriteLine("Thank you for playing!");
