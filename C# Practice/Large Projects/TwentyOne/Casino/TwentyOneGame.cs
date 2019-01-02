@@ -36,7 +36,7 @@ namespace Casino.TwentyOne
                 }
                 if (bet < 0)
                 {
-                    throw new Exception();
+                    throw new Exception("Security! Kick this person out.");
                 }
                 bool successfullyBet = player.Bet(bet);
                 if (!successfullyBet)
