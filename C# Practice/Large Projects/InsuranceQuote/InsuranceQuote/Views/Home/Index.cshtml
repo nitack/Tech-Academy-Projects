@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Insuro-matic";
+}
+
+<div class="jumbotron">
+    <h1>Insuro-matic</h1>
+    <p class="lead">Just ten pieces of information and we'll get you a quote.</p>
+</div>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Apply today, no one turned down</h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Quote", "Home", FormMethod.Post))
+            {
+            <div class="row no-gutters">
+                <div class="form-group col-md-4">
+                    <input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+                </div>
+                <div class="form-group col-md-4">
+                    <input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+                </div>
+                <div class="form-group col-md-4">
+                    <input name="Age" type="text" class="form-control" placeholder="Your Age" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" />
+                </div>
+                <div class="form-group col-md-4">
+                    <input name="CarYear" type="text" class="form-control" placeholder="Car Year" />
+                </div>
+                <div class="form-group col-md-4">
+                    <input name="CarMake" type="text" class="form-control" placeholder="Car Make" />
+                </div>
+                <div class="form-group col-md-4">
+                    <input name="CarModel" type="text" class="form-control" placeholder="Car Model" />
+                </div>
+                <div class="form-group col-md-4">
+                    <div class="radio">
+                        <label><input type="radio" name="DUI" value="dui" checked>Had a DUI</label>
+                        <label><input type="radio" name="DUI" value="none">No DUIs</label>
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="Tickets" type="text" class="form-control" placeholder="How many speeding tickets?" />
+                </div>
+                <div class="form-group col-md-4">
+                    <div class="radio">
+                        <label><input type="radio" name="Coverage" value="full" checked>Full Coverage</label>
+                        <label><input type="radio" name="Coverage" value="liability">Just Liability</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-block btn-primary">Submit</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>
