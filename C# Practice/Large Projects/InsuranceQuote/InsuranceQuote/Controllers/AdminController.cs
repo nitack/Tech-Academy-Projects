@@ -16,13 +16,14 @@ namespace InsuranceQuote.Controllers
             using (InsuranceEntities db = new InsuranceEntities())
             {
                 var quotes = db.InsuranceQuotes;
-                var quoteVms = new List<QuoteVm>();
+                var quoteVms = new List<Quote>();
                 foreach (var quote in quotes)
                 {
-                    var quoteVm = new QuoteVm();
+                    var quoteVm = new Quote();
                     quoteVm.FirstName = quote.FirstName;
                     quoteVm.LastName = quote.LastName;
                     quoteVm.Email = quote.Email;
+                    quoteVm.Rate = quote.Rate;
                     quoteVms.Add(quoteVm);
                 }
                 return View(quoteVms);

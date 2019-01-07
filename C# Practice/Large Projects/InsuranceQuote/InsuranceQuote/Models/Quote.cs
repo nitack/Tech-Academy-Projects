@@ -7,10 +7,9 @@ namespace InsuranceQuote.Models
 {
     public class Quote
     {
-        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string EmailAddress { get; set; }
+        public string Email { get; set; }
         public int Rate { get; set; }
     }
 }
